@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/split.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- 상단헤더영역 -->
+        <header class="header deactive">
+            <div class="group_flex">
+                <h1 class="logo">
+                    <a href="">
+                        <svg data-v-37d948ec="" data-v-1aabb789="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75 25" class="ico_logo"><defs data-v-37d948ec=""><path data-v-37d948ec="" id="os5cgsl0ta" d="M0.011 0.205L11.948 0.205 11.948 22.203 0.011 22.203z"></path> <path data-v-37d948ec="" id="oanpyfjipc" d="M0.264 0.004L13.566 0.004 13.566 15.487 0.264 15.487z"></path></defs> <g data-v-37d948ec="" fill="" fill-rule="evenodd"><g data-v-37d948ec=""><path data-v-37d948ec="" d="M18.91 20.05c.344 0 .7-.046 1.071-.137.371-.09.742-.209 1.113-.354.371-.146.72-.323 1.045-.532.327-.21.616-.432.87-.668V14.87h-2.607c-1.32 0-2.284.227-2.89.681-.606.455-.91 1.173-.91 2.154 0 1.562.769 2.344 2.308 2.344m-4.706-2.235c0-1.508.503-2.658 1.513-3.448 1.008-.79 2.476-1.186 4.401-1.186h2.89v-.954c0-2.308-1.018-3.461-3.053-3.461-.653 0-1.34.09-2.057.272-.719.182-1.377.409-1.977.681l-.736-1.771c.745-.418 1.55-.74 2.413-.968.862-.227 1.704-.341 2.52-.341 3.526 0 5.288 1.88 5.288 5.642v9.54h-1.852l-.3-1.635c-.745.6-1.54 1.063-2.385 1.39-.845.328-1.649.49-2.414.49-1.325 0-2.365-.376-3.12-1.13-.754-.754-1.131-1.794-1.131-3.12" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112)" class="path"></path> <g data-v-37d948ec="" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112) translate(29.859)"><mask data-v-37d948ec="" id="5ym1s98mqb" fill="#fff"><use data-v-37d948ec="" xlink:href="#os5cgsl0ta"></use></mask> <path data-v-37d948ec="" d="M9.222 6.53l1.963 1.416-4.823 6.052 5.586 6.705-1.934 1.5-6.596-8.07L9.222 6.53zM2.518 21.82H.011V.75L2.518.206V21.82z" mask="url(#5ym1s98mqb)" class="path"></path></g> <path data-v-37d948ec="" d="M48.735 20.05c.343 0 .701-.046 1.072-.137.371-.09.742-.209 1.113-.354.37-.146.718-.323 1.045-.532.324-.21.614-.432.868-.668V14.87h-2.606c-1.322 0-2.285.227-2.89.681-.607.455-.909 1.173-.909 2.154 0 1.562.768 2.344 2.307 2.344m-4.706-2.235c0-1.508.504-2.658 1.512-3.448 1.01-.79 2.475-1.186 4.403-1.186h2.889v-.954c0-2.308-1.017-3.461-3.053-3.461-.655 0-1.34.09-2.058.272-.719.182-1.377.409-1.975.681l-.737-1.771c.746-.418 1.55-.74 2.412-.968.862-.227 1.703-.341 2.522-.341 3.524 0 5.288 1.88 5.288 5.642v9.54h-1.855l-.3-1.635c-.745.6-1.538 1.063-2.385 1.39-.844.328-1.648.49-2.411.49-1.327 0-2.368-.376-3.121-1.13-.755-.754-1.131-1.794-1.131-3.12" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112)" class="path"></path> <g data-v-37d948ec="" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112) translate(58.405 6.66)"><mask data-v-37d948ec="" id="e5668wah2d" fill="#fff"><use data-v-37d948ec="" xlink:href="#oanpyfjipc"></use></mask> <path data-v-37d948ec="" d="M6.915 2.021c-1.308 0-2.312.491-3.011 1.472-.701.982-1.05 2.417-1.05 4.307 0 1.872.349 3.285 1.05 4.239.699.954 1.703 1.431 3.011 1.431 1.326 0 2.34-.477 3.04-1.431.7-.954 1.049-2.367 1.049-4.239 0-1.89-.35-3.325-1.049-4.307-.7-.981-1.714-1.472-3.04-1.472m0-2.017c2.071 0 3.699.673 4.878 2.017 1.182 1.346 1.773 3.272 1.773 5.78 0 2.47-.585 4.37-1.758 5.697-1.172 1.325-2.804 1.989-4.893 1.989-2.07 0-3.698-.664-4.878-1.99C.855 12.172.264 10.272.264 7.8c0-2.507.594-4.433 1.785-5.779C3.24.677 4.862.004 6.915.004" mask="url(#e5668wah2d)" class="path"></path></g> <path data-v-37d948ec="" d="M2.552.205L.044.75v21.07h2.508V.204zm.9 13.929l6.595 8.069 1.937-1.5-5.589-6.705 4.825-6.051-1.962-1.418-5.807 7.605z" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112)" class="path"></path></g></g></svg>
+                    </a>
+                </h1>
+    
+                <div class="menu_area">
+                    <a href="" class="btn_more yellow">
+                        <span>문의하기</span>
+                    </a>
+                    <button class="btn-nav">
+                        <span class="blind">확장 영역</span>
+                    </button>
+                </div>
+
+                <!-- 메뉴클릭시 나오는 페이지 -->
+                <nav class="side-nav">
+                    <div class="side_menu">
+                        <ul class="menu_left">
+                            <li class="menu_item"><a href="" class="nav">소개</a></li>
+                            <li class="menu_item"><a href="" class="nav">이야기</a></li>
+                            <li class="menu_item"><a href="" class="nav">뉴스</a></li>
+                            <li class="menu_item"><a href="" class="nav">기술과 서비스</a></li>
+                            <li class="menu_item"><a href="" class="nav">약속과 책임</a></li>
+                        </ul>
+                        <ul class="menu_sns">
+                            <li class="menu_item"><a href="" class="nav">투자정보</a></li>
+                            <li class="menu_item"><a href="" class="nav">인재영입</a></li>
+                            <li class="menu_item"><a href="" class="nav">고객센터</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+    
+        <main class="main">
+            <!-- 메인비쥬얼영역 -->
+            <section class="sc_vis">
+                
+                <h2 class="blind">카카오문화</h2>
+                <div class="group_vis">
+                    <!-- 왼쪽영역 -->
+                    <div class="group_intro">
+                        <strong class="title">카카오는 도전을 두려워<br>하지 않고 기술과 사람으로 <br>더 나은 세상을 만듭니다.</strong>
+                        <p class="desc">Willing to Venture</p>
+                    </div>
+                    <!-- 오른쪽영역 -->
+                    <div class="group_slide">
+                        <!-- Swiper -->
+                        <div class="swiper main_slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="bg"></div>
+                                    <img src="./assets/images/vis1.webp" alt data-swiper-parallax-x="30%" data-swiper-parallax-scale="1.1">
+                                    <div class="text-box">
+                                        <strong class="title">카카오 i</strong>
+                                        <p class="desc">변화를 만드는 AI</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bg"></div>
+                                    <img src="./assets/images/vis2.webp" alt data-swiper-parallax-x="30%" data-swiper-parallax-scale="1.1">
+                                    <div class="text-box">
+                                        <strong class="title">카카오테크</strong>
+                                        <p class="desc">사람과 기술이 함께</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bg"></div>
+                                    <img src="./assets/images/vis3.webp" alt data-swiper-parallax-x="30%" data-swiper-parallax-scale="1.1">
+                                    <div class="text-box">
+                                        <strong class="title">kakao arena                                        </strong>
+                                        <p class="desc">카카오식 문제 해결 대회</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bg"></div>
+                                    <img src="./assets/images/vis4.webp" alt data-swiper-parallax-x="30%" data-swiper-parallax-scale="1.1">
+                                    <div class="text-box">
+                                        <strong class="title">카카오뱅크</strong>
+                                        <p class="desc">또 한 번 은행을 새롭게</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+
+                            <div class="gauge">
+                                <span class="curr"></span>
+                            </div>
+                            <button class="btn-autoplay" aria-label="자동재생정지"></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- 회사소개영역 -->
+            <section class="sc_intro inner">
+                <h2 class="blind">회사소개</h2>
+                <div class="group_intro" data-scroll="">
+                    <div class="txt_wrap">
+                        <strong class="title">보고서 발간을 맞아, CEO 메시지</strong>
+                        <p class="desc">
+                        카카오는 '기술과 사람이 만드는 더 나은 세상'을 만들기 위해 최선의 노력을 다하고자 합니다. 이를 위한 카카오의 여정에 많은 관심과 지지를 보내주신 주주, 투자자, 이용자, 파트너, 지역사회 그리고 크루 여러분께 깊은 감사의 말씀을 드립니다. 세상을 선하게 바꾸려는 카카오의 노력과 글로벌 영토 개척에 앞으로도 많은 응원을 부탁드립니다. 감사합니다.
+                        </p>
+                    </div>
+
+                    <div class="img_wrap">
+                        <img src="./assets/images/ceo.webp" class="people" alt="ceo 사진">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 서비스영역 -->
+            <section class="sc_service">
+                <div class="group_service inner">
+                    <h2>Kakao Services</h2>
+                    <ul class="service_list" data-scroll="">
+                        <li class="service_item">
+                            <a href="" class="nav">
+                                <span class="title">Kakaotalk</span>
+                                <span class="plus">+</span>
+                            </a>
+                            <div class="sub">
+                                <h3>관련 서비스</h3>
+                                <ul class="sub_list">
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/kakaotalk1.webp">
+                                            <strong class="title">카카오톡</strong>
+                                            <p class="desc">모든연결의 시작</p>
+                                        </a>
+                                    </li>
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/kakaotalk2.webp">
+                                            <strong class="title">카카오톡 채널</strong>
+                                            <p class="desc">더 편한 모바일 생활의 시작</p>
+                                        </a>
+                                    </li>
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/kakaotalk3.webp">
+                                            <strong class="title">카카오톡 주문하기</strong>
+                                            <p class="desc">초간단 음식주문</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="service_item">
+                            <a href="" class="nav">
+                                <span class="title">Story</span>
+                                <span class="plus">+</span>
+                            </a>
+                            <div class="sub">
+                                <h3>관련 서비스</h3>
+                                <ul class="sub_list">
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/story1.webp">
+                                            <strong class="title">Story</strong>
+                                            <p class="desc">우리 모두, 저마다의</p>
+                                        </a>
+                                    </li>
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/story2.webp">
+                                            <strong class="title">브런치스토리</strong>
+                                            <p class="desc">작품이 되는 이야기</p>
+                                        </a>
+                                    </li>
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/story3.webp">
+                                            <strong class="title">카카오스토리</strong>
+                                            <p class="desc">그대로의 일상 이야기</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="service_item">
+                            <a href="" class="nav">
+                                <span class="title">Commerce</span>
+                                <span class="plus">+</span>
+                            </a>
+                            <div class="sub">
+                                <h3>관련 서비스</h3>
+                                <ul class="sub_list">
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/comm1.webp">
+                                            <strong class="title">지그재그</strong>
+                                            <p class="desc">나를 표현하는 쇼핑</p>
+                                        </a>
+                                    </li>
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/comm2.webp">
+                                            <strong class="title">쇼핑하우</strong>
+                                            <p class="desc">현명한 쇼핑 생활의 시작</p>
+                                        </a>
+                                    </li>
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/comm3.webp">
+                                            <strong class="title">카카오메이커스</strong>
+                                            <p class="desc">더 나은 내일을 만드는 주문</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="service_item">
+                            <a href="" class="nav">
+                                <span class="title">Life</span>
+                                <span class="plus">+</span>
+                            </a>
+                            <div class="sub">
+                                <h3>관련 서비스</h3>
+                                <ul class="sub_list">
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/life1.webp">
+                                            <strong class="title">카카오내비</strong>
+                                            <p class="desc">정확하고 즐거운 운전 도우미</p>
+                                        </a>
+                                    </li>
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/life2.webp">
+                                            <strong class="title">헤이카카오</strong>
+                                            <p class="desc">말 한마디로 편해지는 일상</p>
+                                        </a>
+                                    </li>
+                                    <li class="sub_item">
+                                        <a href="">
+                                            <img src="./assets/images/life3.webp">
+                                            <strong class="title">카카오페이</strong>
+                                            <p class="desc">마음놓고 금융하다</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 프로젝트영역 -->
+            <section class="sc_project">
+                <h2 class="blind">프로젝트</h2>
+                <div class="group_project">
+                    <div class="img_wrap">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <img src="./assets/images/prj1.webp" alt="카카오TV"> 
+                    </div>
+                    <div class="project_inner" >
+                        <h3 class="title">오리지널 콘텐츠와<br>라이브를 즐길 수 있는</h3>
+                        <p class="desc">카카오TV</p>
+                    </div>
+                </div>
+                <div class="group_project">
+                    <div class="img_wrap">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <img src="./assets/images/prj2.webp" alt="비즈니스">
+                    </div>
+                    <div class="project_inner">
+                        <h3 class="title">함께 일하는 즐거움,<br>우리들의 아지트</h3>
+                        <p class="desc">비즈니스</p>
+                    </div>
+                </div>
+                <div class="group_project">
+                    <div class="img_wrap">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <img src="./assets/images/prj3.webp" alt="커머스">
+                    </div>
+                    <div class="project_inner">
+                        <h3 class="title">마음을 전하는 가장 쉬운 방법,<br>카카오톡 선물하기</h3>
+                        <p class="desc">커머스</p>
+                    </div>
+                </div>
+                
+            </section>
+
+            <!-- 상담하기영역 -->
+            <section class="sc_comm">
+                <div class="group_comm" data-scroll="">
+                    <div class="prj_more">
+                        <h2>더보고 싶어요?</h2>
+                        <a href="" class="link_detail">프로젝트 더보기<span>></span></a>
+                    </div>
+
+                    <div class="comm_area">             
+                        <div class="txt_wrap">
+                            <strong class="title">당신의 프로젝트에 대해 이야기해 봅시다.</strong>
+                            <p class="desc">더 많은 크루 소식이 있어요</p>
+                        </div>
+                        <div class="btn_wrap">
+                            <a href="" class="btn_more">
+                                <span>상담하기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 뉴스기술영역 -->
+            <div class="flex_inner1">
+                <div class="group_news" data-scroll="">
+                    <section class="sc_news">
+                        <h2>News</h2>
+                        <div class="box">
+                            <strong class="title">
+                                뉴스<br>
+                                아카이브
+                            </strong>
+                            <a href="" class="link_detail">뉴스 더보기<span class="black">></span></a>
+                        </div>
+                    </section>
+
+                    <section class="sc_event">
+                        <h2>Technology</h2>
+                        <div class="box">
+                            <strong class="title">
+                                변화시키는 <br>
+                                카카오 기술
+                            </strong>
+                            <a href="" class="link_detail">기술 더보기<span>></span></a>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- 협력사영역 -->
+            <section class="sc_partner">
+                <h2>kakao Partner</h2>
+                <div class="group_partner">
+                    <ul class="img_wrap" data-scroll="">
+                        <li><img src="./assets/images/part1.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part2.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part3.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part4.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part5.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part6.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part7.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part8.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part9.png" alt="파트너로고"></li>
+                        <li><img src="./assets/images/part10.png" alt="파트너로고"></li>         
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 인재영입영역 -->
+            <section class="sc_krew" >
+                <div class="group_cons" data-scroll>
+                    <h2>Join the krew</h2>
+                    <p>
+                        다양한 생각을 자유롭게 나누며, 언제나 놀라운 결과를 만들어내죠.<br>
+                        당신도 세상을 바꾸고 싶나요?
+                        카카오로 오세요!!
+                    </p>
+                        
+                    <a href="" class="btn_more">
+                        <span>채용공고 보기</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- 하단푸터영역 -->
+        <footer class="footer" data-scroll="">
+            <h2 class="blind">카카오 푸터</h2>
+            <div class="group_util inner">
+                <div class="txt_wrap">
+                    <div class="inquiry_area">
+                        <h3>오늘의 카카오가 궁금하다면?</h3>
+                        <a href="" class="link_detail">기업사이트 보러가기<span>></span></a>
+                    </div>
+                    <div class="sns_area">
+                        <a href="">투자정보</a>
+                        <a href="">인재영입</a>
+                        <a href="">고객센터</a>
+                    </div>
+                    
+                    <div class="fmenu_area">
+                        <a href="">Facebook</a>
+                        <a href="">Instagram</a>
+                        <a href="">Twitter</a>
+                        <a href="">Blog</a>
+                    </div>
+                </div>
+                <figure class="img_wrap"></figure>
+            </div>
+
+            <div class="group_info inner">
+                <div class="info_area">
+                    <a href="" class="logo">
+                        <svg data-v-37d948ec="" data-v-1aabb789="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75 25" class="ico_logo" style="fill: rgb(0, 0, 0);"><defs data-v-37d948ec=""><path data-v-37d948ec="" id="os5cgsl0ta" d="M0.011 0.205L11.948 0.205 11.948 22.203 0.011 22.203z"></path> <path data-v-37d948ec="" id="oanpyfjipc" d="M0.264 0.004L13.566 0.004 13.566 15.487 0.264 15.487z"></path></defs> <g data-v-37d948ec="" fill="var(--color-yellow1)" fill-rule="evenodd"><g data-v-37d948ec=""><path data-v-37d948ec="" d="M18.91 20.05c.344 0 .7-.046 1.071-.137.371-.09.742-.209 1.113-.354.371-.146.72-.323 1.045-.532.327-.21.616-.432.87-.668V14.87h-2.607c-1.32 0-2.284.227-2.89.681-.606.455-.91 1.173-.91 2.154 0 1.562.769 2.344 2.308 2.344m-4.706-2.235c0-1.508.503-2.658 1.513-3.448 1.008-.79 2.476-1.186 4.401-1.186h2.89v-.954c0-2.308-1.018-3.461-3.053-3.461-.653 0-1.34.09-2.057.272-.719.182-1.377.409-1.977.681l-.736-1.771c.745-.418 1.55-.74 2.413-.968.862-.227 1.704-.341 2.52-.341 3.526 0 5.288 1.88 5.288 5.642v9.54h-1.852l-.3-1.635c-.745.6-1.54 1.063-2.385 1.39-.845.328-1.649.49-2.414.49-1.325 0-2.365-.376-3.12-1.13-.754-.754-1.131-1.794-1.131-3.12" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112)" class="path"></path> <g data-v-37d948ec="" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112) translate(29.859)"><mask data-v-37d948ec="" id="5ym1s98mqb" fill="#fff"><use data-v-37d948ec="" xlink:href="#os5cgsl0ta"></use></mask> <path data-v-37d948ec="" d="M9.222 6.53l1.963 1.416-4.823 6.052 5.586 6.705-1.934 1.5-6.596-8.07L9.222 6.53zM2.518 21.82H.011V.75L2.518.206V21.82z" mask="url(#5ym1s98mqb)" class="path"></path></g> <path data-v-37d948ec="" d="M48.735 20.05c.343 0 .701-.046 1.072-.137.371-.09.742-.209 1.113-.354.37-.146.718-.323 1.045-.532.324-.21.614-.432.868-.668V14.87h-2.606c-1.322 0-2.285.227-2.89.681-.607.455-.909 1.173-.909 2.154 0 1.562.768 2.344 2.307 2.344m-4.706-2.235c0-1.508.504-2.658 1.512-3.448 1.01-.79 2.475-1.186 4.403-1.186h2.889v-.954c0-2.308-1.017-3.461-3.053-3.461-.655 0-1.34.09-2.058.272-.719.182-1.377.409-1.975.681l-.737-1.771c.746-.418 1.55-.74 2.412-.968.862-.227 1.703-.341 2.522-.341 3.524 0 5.288 1.88 5.288 5.642v9.54h-1.855l-.3-1.635c-.745.6-1.538 1.063-2.385 1.39-.844.328-1.648.49-2.411.49-1.327 0-2.368-.376-3.121-1.13-.755-.754-1.131-1.794-1.131-3.12" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112)" class="path"></path> <g data-v-37d948ec="" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112) translate(58.405 6.66)"><mask data-v-37d948ec="" id="e5668wah2d" fill="#fff"><use data-v-37d948ec="" xlink:href="#oanpyfjipc"></use></mask> <path data-v-37d948ec="" d="M6.915 2.021c-1.308 0-2.312.491-3.011 1.472-.701.982-1.05 2.417-1.05 4.307 0 1.872.349 3.285 1.05 4.239.699.954 1.703 1.431 3.011 1.431 1.326 0 2.34-.477 3.04-1.431.7-.954 1.049-2.367 1.049-4.239 0-1.89-.35-3.325-1.049-4.307-.7-.981-1.714-1.472-3.04-1.472m0-2.017c2.071 0 3.699.673 4.878 2.017 1.182 1.346 1.773 3.272 1.773 5.78 0 2.47-.585 4.37-1.758 5.697-1.172 1.325-2.804 1.989-4.893 1.989-2.07 0-3.698-.664-4.878-1.99C.855 12.172.264 10.272.264 7.8c0-2.507.594-4.433 1.785-5.779C3.24.677 4.862.004 6.915.004" mask="url(#e5668wah2d)" class="path"></path></g> <path data-v-37d948ec="" d="M2.552.205L.044.75v21.07h2.508V.204zm.9 13.929l6.595 8.069 1.937-1.5-5.589-6.705 4.825-6.051-1.962-1.418-5.807 7.605z" transform="translate(-151 -168) translate(79.5 145) translate(72 24) translate(.956 .112)" class="path"></path></g></g></svg>
+                    </a>
+                </div>
+                <address class="addr_area">
+                    <p class="copy">
+                        © Kakao Corp. All rights reserved.<br>
+                        <span class="addr">
+                        제주특별자치도 제주시 첨단로 242<br>
+                        (우)63309<br>
+                        </span>
+                    </p>
+                </address>
+                <div class="data_area">
+                    <a href="">위치기반서비스이용약관</a>
+                    <a href="">개인정보처리방식</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 마우스커서 -->
+        <div class="cursor">
+            <!-- View -->
+        </div>
+
+    </div><!-- wrapper// -->
+</body>
+
+</html>

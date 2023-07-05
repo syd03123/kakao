@@ -1,0 +1,351 @@
+@import './reset.css';
+@import './common.css';
+@import './fonts.css';
+
+
+/* 헤더영역 */
+.header{
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+}
+.deactive{
+    background-color: transparent;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.header.hide{
+    background: #fff;
+    border-bottom: 1px solid #e2e2e2;
+}
+.header .group_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .group_flex .logo{}
+.header .group_flex .logo a{
+    display: block;
+    width: 80px;
+}
+.header .group_flex .logo a svg{
+    fill: var(--color-yellow1);
+}
+
+.header .group_flex .menu_area{
+    display: flex;
+    align-items: center;
+}
+.header .group_flex .btn_more.yellow{
+    border: 1px solid var(--color-yellow1);
+    color: var(--color-yellow1); 
+}
+
+/* .header .btn_more.yellow::before{
+    background: #fff;
+}
+.header .btn_more.yellow:hover{
+    color: #000;
+} */
+
+.header .group_flex .btn-nav{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--color-yellow1);
+    z-index: 5;
+    gap: 5px;
+}
+.header .group_flex .btn-nav::before{
+    width: 20px;
+    height: 2px;
+    background: #000;
+    content: '';
+}
+.header .group_flex .btn-nav::after{
+    width: 20px;
+    height: 2px;
+    background: #000;
+    content: '';
+}
+
+.header .group_flex .btn-nav.on{
+    background: #000;
+    gap: 0;
+}
+.header .group_flex .btn-nav.on::before{
+    background: #fff;
+    transform: rotate(45deg);
+}
+.header .group_flex .btn-nav.on::after{
+    background: #fff;
+    transform: rotate(-45deg) translate(1px, -1px)
+}
+
+/* 메뉴 누를때 나오는 곳 */
+.side-nav{
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-yellow1);
+    height: 100%;
+    transition: 0.3s;
+}
+.side-nav.on{
+    opacity: 1;
+    visibility: visible;
+}
+.side-nav .close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #000;
+    color: var(--color-yellow1);
+    font-size: 40px;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+
+.side-nav .side_menu{
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 100px;
+}
+.side-nav .side_menu .menu_left{}
+.side-nav .side_menu .menu_item{
+    overflow: hidden;
+}
+.side-nav .side_menu .nav{
+    display: inline-flex;
+}
+
+.side-nav .side_menu .menu_left .menu_item{
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 55px;
+    color: #3f3f3f;
+}
+
+.side-nav .side_menu .menu_left .menu_item:hover{
+    color:#000;
+}
+
+.side-nav .side_menu .menu_sns{}
+.side-nav .side_menu .menu_sns .menu_item{
+    font-size: 18px;
+    line-height: 25px;
+    color: #3f3f3f;
+}
+.side-nav .side_menu .menu_sns .menu_item:hover{
+    color:#000;
+}
+
+
+
+
+/* 하단 */
+footer{
+    position: relative;
+    padding: 100px 0;
+    background: #000;
+    overflow: hidden;
+    color: #fff;
+}
+footer .group_util{
+    font-size: 24px;
+    margin-bottom: 300px;
+}
+footer .group_util .txt_wrap{
+    display: flex;
+}
+footer .group_util .inquiry_area{
+    margin-right: 300px;
+}
+footer .group_util .inquiry_area h3{
+    margin-bottom: 10px;
+}
+footer .group_util .inquiry_area .link_detail{
+    color: #fffFFF99;
+}
+
+footer .group_util .sns_area{
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .group_util .fmenu_area{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .group_util .img_wrap{
+    position: absolute;
+    top: 50px;
+    right: -100px;
+}
+footer .group_util .img_wrap img{
+    width: 600px;
+}
+
+
+footer .group_info{
+    display: flex;
+    justify-content: space-between;
+}
+footer .group_info .info_area{
+    display: flex;
+}
+
+footer .group_info .info_area{
+    flex: 2;
+}
+footer .group_info .logo{
+    width: 200px;
+}
+
+footer .group_info .addr_area{}
+footer .group_info .copy{
+    line-height: 18px;
+}
+footer .group_info .addr{
+    color: #fffFFF99;
+}
+
+footer .group_info .data_area{}
+footer .group_info .data_area a{
+    margin-left: 20px;
+    color: #fffFFF99;
+}
+
+
+
+/* 작은피씨 */
+@media (max-width:1200px) {
+
+    .header {
+        padding: 30px 50px;
+    }
+
+}
+
+/* 테블릿 */
+@media (max-width:1024px) {
+    .header {
+        padding: 20px 30px;
+    }
+
+
+    footer {
+        padding: 70px 0;
+    }
+    footer .group_util {
+        font-size: 18px;
+        margin-bottom: 70px;
+    }
+    footer .group_info .logo{
+        width: 120px;
+    }
+
+    footer .group_util .inquiry_area {
+        margin-right: 100px;
+    }
+}
+
+/* 모바일 */
+@media (max-width:767px) {
+    .header {
+        padding: 20px 20px;
+    }
+    .header .group_flex .btn_more.yellow{
+        display: none;
+    }
+
+    .side-nav .side_menu {
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 50px;
+    }
+    .side-nav .side_menu .menu_left .menu_item {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+    .side-nav .side_menu .menu_sns .menu_item {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
+    footer .group_util {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    footer .group_util .txt_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    footer .group_util .inquiry_area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+    footer .group_util .inquiry_area .link_detail{
+        font-size: 14px;
+    }
+
+    footer .group_util .sns_area {
+        margin-right: 0;
+    }
+    footer .group_util .fmenu_area {
+        align-items: center;
+    }
+
+
+    footer .group_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    footer .group_info .logo{
+        width: 80px;
+    }
+    footer .group_info .copy {
+        line-height: 23px;
+    }
+    footer .group_info .data_area{
+        display: flex;
+        gap: 10px;
+    }
+    footer .group_info .data_area a{
+        margin: 0;
+    }
+
+
+}
